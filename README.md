@@ -4,13 +4,13 @@
 
 #### Usage:
 
-- Command line
 - Simply move the `simpserv.js` file to the root folder and `node simpserv.js`
-- for npm (node_modules) `npm run simpserv`
+- For npm (node_modules) `npm run simpserv`
+- For demo site pages, change `config root` to `node_modules/simpserv`
 
 #### Operation:
 - You can run it `node simpserv.js`
-- Root is relative to the folder node is called in
+- Root is relative to the folder node is called from.
 - It only reads html and included inline files (ie: it does not shell out for PHP, python etc)
 
 #### Configuration:
