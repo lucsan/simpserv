@@ -1,0 +1,12 @@
+{
+  "name": "simpleserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serv": "node node_modules/simpserv/simpserv.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
