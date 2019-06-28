@@ -1,12 +1,16 @@
 {
   "name": "simpleserver",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple node server",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serv": "node node_modules/simpserv/simpserv.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucsan/simpserv.git"
+  },
+  "author": "👽 lucsan@zencorp.co.uk",
   "license": "ISC"
 }

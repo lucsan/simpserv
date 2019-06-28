@@ -4,7 +4,7 @@
 
 #### Usage:
 
-- Simply move the `simpserv.js` file to the root folder and `node simpserv.js`
+- Simply move the `simpserv.js` file to a root folder and `node simpserv.js`
 - For npm (node_modules) `npm run simpserv`
 - For demo site pages, change `config root` to `node_modules/simpserv`
 
