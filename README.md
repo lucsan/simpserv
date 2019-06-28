@@ -2,6 +2,9 @@
 
 💼 A node based Micro web page server
 
+🌐 Github page for simpserv https://lucsan.github.io/simpserv/
+🌐 Github page for 🌞lucsan 🔬lab https://github.com/lucsan/lab/wiki
+
 #### Usage:
 
 - Simply move the `simpserv.js` file to a root folder and `node simpserv.js`
@@ -20,5 +23,6 @@ const config = {
   port: '8080',
   root: '',
   index: 'index.html',
+  autoload: true
 }
 ```

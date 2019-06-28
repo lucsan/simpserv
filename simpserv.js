@@ -6,10 +6,10 @@ const config = {
   port: '8080',
   root: '',
   index: 'index.html',
+  autoload: true
 }
 
 // The server is relative to the folder node is called in.
-
 const router = (request, response) => {
   let filename = url.parse(request.url).pathname
   filename = filename.replace('/', '')
@@ -22,7 +22,7 @@ const router = (request, response) => {
   if (ext == 'js') ct = 'text/javascript;'
 
   fs.readFile(path,  (err, page) => {
-    if (err) console.log(err)
+    if (err) console.error(err)
     response.writeHead(200, { 'Content-Type': `${ct}charset=utf-8` })
     if (page) {
       response.write(page)
@@ -35,9 +35,9 @@ const router = (request, response) => {
 
 function start () {
   http.createServer(onRequest).listen(config.port)
-  console.log('SimpServ running')
+  console.info('SimpServ running')
   function onRequest(request, response) {
-    request.on('error', function(err){ console.log('err ', err) })
+    request.on('error', function(err){ console.error('err ', err) })
     router(request, response)
   }
 }
@@ -46,7 +46,9 @@ exports.start = start
 
 start()
 
-if (process.platform == 'win32') {
-  require('child_process')
-    .exec(`start http://localhost:${config.port}`)
+// 📝 THe Following code is configured for win10 default browser.
+if (config.autoLoad && process.platform == 'win32') {
+  require('child_process').exec(`start http://localhost:${config.port}`)
 }
+
+console.info(`Server running @ http://localhost:${config.port}, Auto browser loading: ${config.autoLoad}`)
